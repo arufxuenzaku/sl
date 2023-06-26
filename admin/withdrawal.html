@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Withdrawal - Admin</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="bg-grid-slate-100 inset-0 bg-slate-50 bg-center">
+		<header>
+			<div class="container">
+				<div>
+					<input type="checkbox" class="iNav peer/nav hidden" name="iNav" id="iNav" />
+					<label for="iNav" class="fCls peer-checked/nav:block"></label>
+
+					<div class="headL">
+						<div>
+							<h1><a href="#!">ShortLink</a></h1>
+						</div>
+						<label for="iNav" class="lNav">
+							<span class="origin-top-left"></span><span></span><span class="origin-bottom-left"></span>
+						</label>
+					</div>
+
+					<div class="headM peer-checked/nav:block">
+						<ul>
+							<li><a href="dashboard.html">Dashboard</a></li>
+							<li><a href="user.html">User</a></li>
+							<li><span>Withdrawal</span></li>
+							<li><a href="event.html">Event</a></li>
+							<li><a href="config.html">Config</a></li>
+						</ul>
+					</div>
+
+					<div class="headR peer-checked/nav:block">
+						<input type="checkbox" class="peer/user inUser hidden" name="inUser" id="inUser" />
+						<label for="inUser" class="fCls peer-checked/user:lg:block"></label>
+
+						<div class="m">
+							<div class="flex-shrink-0">
+								<label for="inUser" class="lnUser">
+									<img
+										class="u-photo"
+										src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPzZlVciGeYVCgCEcfFKeNI8IhtFHNShFG_5Xavi8bej56zOpPRIjHEUZsTsLybpnEZkNJ6M-ivL0lcjLs9YEu_xVrD14a9gtcfxBAzIvwrmAY920GO9gkHtlljlwvRnLcRvD8WL5pbEcmgxCpct-7EJsMymUnpFCMxpTk8i0b0P7O82_kzKoEjeb3/w80/user-icon.webp"
+										alt=""
+									/>
+								</label>
+							</div>
+
+							<div class="userDt lg:hidden">
+								<div class="u-name text-white">Username</div>
+								<div class="u-mail text-sm leading-none text-gray-400">email@example.com</div>
+							</div>
+						</div>
+
+						<div class="n peer-checked/notif:hidden peer-checked/user:lg:block">
+							<a href="#!" id="signOut">Sign out</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container mt-20 px-5">
+			<input class="tbIn hidden" id="fTabs-1" type="radio" name="wdTabs" checked />
+			<input class="tbIn hidden" id="fTabs-2" type="radio" name="wdTabs" />
+
+			<div class="tbHd">
+				<label for="fTabs-1">Pending withdrawal</label>
+				<label for="fTabs-2">Successful withdrawal</label>
+			</div>
+
+			<div class="tbCn">
+				<div class="tbTx-1">
+					<div class="relative mb-8 overflow-hidden rounded-xl bg-slate-100">
+						<div class="mb-5 max-h-96 overflow-auto">
+							<table class="mx-auto w-max table-auto border-collapse text-sm text-slate-500 lg:w-full">
+								<thead class="sticky top-0 bg-slate-100 text-left font-bold">
+									<tr>
+										<th class="px-5 py-3">No</th>
+										<th class="px-5 py-3">Username</th>
+										<th class="px-5 py-3">Date</th>
+										<th class="px-5 py-3">Amount</th>
+										<th class="px-5 py-3">Metode</th>
+										<th class="px-5 py-3">Account</th>
+										<th class="px-5 py-3">Action</th>
+									</tr>
+								</thead>
+								<tbody class="bg-white" id="wd-pending">
+									<tr class="border-b border-slate-100">
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pointer-events-none absolute inset-0 rounded-xl border border-slate-200"></div>
+					</div>
+				</div>
+
+				<div class="tbTx-2">
+					<div class="relative mb-8 overflow-hidden rounded-xl bg-slate-100">
+						<div class="mb-5 max-h-96 overflow-auto">
+							<table class="mx-auto w-max table-auto border-collapse text-sm text-slate-500 lg:w-full">
+								<thead class="sticky top-0 bg-slate-100 text-left font-bold">
+									<tr>
+										<th class="px-5 py-3">No</th>
+										<th class="px-5 py-3">Username</th>
+										<th class="px-5 py-3">Approved on</th>
+										<th class="px-5 py-3">Amount</th>
+										<th class="px-5 py-3">Metode</th>
+										<th class="px-5 py-3">Account</th>
+										<th class="px-5 py-3">Approved by</th>
+									</tr>
+								</thead>
+								<tbody class="bg-white" id="wd-success">
+									<tr class="border-b border-slate-100">
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+										<td class="px-5 py-3">No Data</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="pointer-events-none absolute inset-0 rounded-xl border border-slate-200"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="mt-5 bg-gray-800 py-3 text-gray-300">
+			<span class="flex items-center justify-center gap-1 text-sm">
+				<i>©</i> <span id="getYear">2023</span> ‧
+				<bdi class="flex items-center"
+					><a href="#!" class="flex items-center gap-1"
+						>Shortlink
+						<svg viewBox="0 0 24 24" class="h-4 w-4 text-white" fill="currentColor">
+							<path
+								d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"
+							></path>
+						</svg>
+					</a>
+				</bdi>
+				‧ All rights reserved.</span
+			>
+			<script>
+				/*<![CDATA[*/
+				document.getElementById("getYear").textContent = new Date().getFullYear();
+				/*]]>*/
+			</script>
+		</footer>
+
+		<script>
+			/*<![CDATA[*/
+			let txN = {
+				log: ["Yakin akan logout..?", "Sign-out successful.."],
+				wd: [
+					"Withdrawal approved",
+					`Penarikan pada tgl $1 sejumlah <b>$2</b> dengan metode $3 atas nama ($4 - $5) <a href="withdrawal.html">berhasil</a>..`,
+					"Withdrawal rejected",
+					`Penarikan pada tgl $1 sejumlah <b>$2</b> dengan metode $3 atas nama ($4 - $5) <a href="withdrawal.html">gagal</a>..`,
+					"Successfully approved withdrawal..",
+					"Failed to approve withdrawal..",
+					"Failed to update list withdrawal..",
+					"Failed to update user withdrawal history..",
+					"Failed to update data withdrawal..",
+					"Successfully canceled withdrawal..",
+					"Failed to update pending withdrawal..",
+					"Failed to update user withdrawal history..",
+					"Failed to crud reject withdrawal..",
+					"Approve",
+					"Reject",
+					`Sudah melakukan pembayaran ke $1..?\n\nMetode: $2\nID Akun: $3\nNama Akun: $4\nJumlah: $5`,
+					`Ingin membatalkan pembayaran ke $1..?\n\nMetode: $2\nID Akun: $3\nNama Akun: $4\nJumlah: $5`,
+				],
+			};
+			/*]]>*/
+		</script>
+
+		<script>
+			/*<![CDATA[*/ !(function () {
+				let e,
+					t = ["keydown", "mouseover", "touchmove", "touchstart"],
+					o = () => {
+						let r = document.createElement("script");
+						(r.src = "../admin/js/withdrawal.js"),
+							r.setAttribute("crossorigin", ""),
+							r.setAttribute("type", "module"),
+							document.head.appendChild(r),
+							clearTimeout(e),
+							t.forEach((e) => {
+								window.removeEventListener(e, o);
+							});
+					};
+				null != localStorage.getItem("xAR_script")
+					? o()
+					: window.addEventListener("load", () => {
+							(e = setTimeout(o, 8e3)),
+								t.forEach((e) => {
+									window.addEventListener(e, o);
+								});
+					  });
+			})(); /*]]>*/
+		</script>
+	</body>
+</html>

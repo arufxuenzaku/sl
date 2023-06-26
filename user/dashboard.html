@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dashboard - User</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="bg-grid-slate-100 inset-0 bg-slate-50 bg-center">
+		<header>
+			<div class="container">
+				<div>
+					<input type="checkbox" class="iNav peer/nav hidden" name="iNav" id="iNav" />
+					<label for="iNav" class="fCls peer-checked/nav:block"></label>
+					<div class="headL">
+						<div>
+							<h1><a href="#!">ShortLink</a></h1>
+						</div>
+						<label for="iNav" class="lNav">
+							<span class="origin-top-left"></span><span></span><span class="origin-bottom-left"></span>
+						</label>
+					</div>
+
+					<div class="headM peer-checked/nav:block">
+						<ul>
+							<li><span>Dashboard</span></li>
+							<li><a href="link.html">Link</a></li>
+							<li><a href="report.html">Report</a></li>
+							<li><a href="withdrawal.html">Withdrawal</a></li>
+							<li><a href="event.html">Event</a></li>
+						</ul>
+					</div>
+
+					<div class="headR peer-checked/nav:block">
+						<input type="checkbox" class="peer/user inUser hidden" name="inUser" id="inUser" />
+						<label for="inUser" class="fCls peer-checked/user:lg:block"></label>
+						<input type="checkbox" class="iNotif peer/notif hidden" name="iNotif" id="iNotif" />
+						<label for="iNotif" class="fCls peer-checked/notif:lg:block"></label>
+
+						<div class="m">
+							<div class="flex-shrink-0">
+								<label for="inUser" class="lnUser">
+									<img
+										class="u-photo"
+										src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPzZlVciGeYVCgCEcfFKeNI8IhtFHNShFG_5Xavi8bej56zOpPRIjHEUZsTsLybpnEZkNJ6M-ivL0lcjLs9YEu_xVrD14a9gtcfxBAzIvwrmAY920GO9gkHtlljlwvRnLcRvD8WL5pbEcmgxCpct-7EJsMymUnpFCMxpTk8i0b0P7O82_kzKoEjeb3/w80/user-icon.webp"
+										alt=""
+									/>
+								</label>
+							</div>
+
+							<div class="userDt lg:hidden">
+								<div class="u-name text-base text-white">Username</div>
+								<div class="u-mail text-sm leading-none text-gray-400">email@example.com</div>
+							</div>
+
+							<label for="iNotif" class="lNotif">
+								<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+									></path>
+								</svg>
+								<span class="hidden">99</span>
+							</label>
+						</div>
+
+						<div class="n peer-checked/notif:hidden peer-checked/user:lg:block">
+							<a href="profile.html">Your Profile</a>
+							<a href="setting.html">Settings</a>
+							<a href="#!" id="signOut">Sign out</a>
+						</div>
+
+						<div id="cNotif" class="o peer-checked/notif:block">
+							<div class="cNtf text-center">Tidak ada..</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container mt-20 max-w-2xl px-5">
+			<div class="mb-8 sm:flex sm:gap-5">
+				<div class="mb-5 flex-grow rounded-md bg-indigo-600 px-5 py-4 text-xs text-white sm:mb-0">
+					<h2 class="mb-3 text-lg">Estimated earnings</h2>
+
+					<div class="flex flex-wrap justify-between gap-5 sm:flex-nowrap">
+						<div>
+							<div><span>Today so far</span></div>
+							<div><span class="text-xl font-bold" id="d_rv_tday">Rp 0</span></div>
+
+							<div class="opacity-80">
+								<div id="d_vc_tday"><span>0</span> <span></span></div>
+								<div>vs yesterday</div>
+							</div>
+						</div>
+
+						<div>
+							<div><span>Yesterday</span></div>
+							<div><span class="text-xl font-bold" id="d_rv_yday">Rp 0</span></div>
+
+							<div class="opacity-80">
+								<div id="d_vc_yday"><span>0</span> <span></span></div>
+								<div>vs today</div>
+							</div>
+						</div>
+
+						<div>
+							<div><span>This month</span></div>
+							<div><span class="text-xl font-bold" id="d_rv_month">Rp 0</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="flex-grow rounded-md bg-indigo-600 px-5 py-4 text-xs text-white">
+					<h2 class="mb-3 text-lg">Balance</h2>
+					<div><span class="text-xl font-bold" id="d_balance">Rp 0</span></div>
+
+					<div><span>Last payment</span></div>
+					<div><span class="font-bold" id="d_lwd">Rp 0</span> <span id="d_lwd_s"></span></div>
+				</div>
+			</div>
+
+			<div class="mb-8 sm:flex sm:gap-5">
+				<div class="mb-5 rounded-md bg-indigo-100 px-5 py-4 text-xs text-gray-600 sm:mb-0 sm:flex-grow">
+					<h2 class="mb-3 text-lg">Click</h2>
+
+					<div class="flex flex-wrap justify-between gap-5 sm:flex-nowrap">
+						<div>
+							<div><span>Today so far</span></div>
+							<div><span class="text-xl font-bold" id="d_cx_tday">0</span></div>
+
+							<div class="opacity-80">
+								<div id="d_cc_tday"><span>0</span> <span></span></div>
+								<div>vs yesterday</div>
+								<!-- 50-125 -->
+								<!-- Math.round((50-125)/125*100) -->
+							</div>
+						</div>
+
+						<div>
+							<div><span>Yesterday</span></div>
+							<div><span class="text-xl font-bold" id="d_cx_yday">0</span></div>
+
+							<div class="opacity-80">
+								<div id="d_cc_yday"><span>0</span> <span></span></div>
+								<div>vs today</div>
+								<!-- 125-50 -->
+								<!-- Math.round((125-50)/50*100) -->
+							</div>
+						</div>
+
+						<div>
+							<div><span>This month</span></div>
+							<div><span class="text-xl font-bold" id="d_cx_month">0</span></div>
+						</div>
+					</div>
+				</div>
+
+				<div class="mb-5 rounded-md bg-indigo-100 px-5 py-4 text-xs text-gray-600 sm:mb-0 sm:flex-grow">
+					<h2 class="mb-3 text-lg">CPC</h2>
+
+					<div class="flex flex-wrap justify-between gap-5 sm:flex-nowrap">
+						<div>
+							<div><span>Today so far</span></div>
+							<div><span class="text-xl font-bold" id="d_cp_tday">0</span></div>
+
+							<div class="opacity-80">
+								<div id="d_xp_tday"><span>0</span> <span></span></div>
+								<div>vs yesterday</div>
+								<!-- 500-850 -->
+								<!-- Math.round((500-850)/850*100) -->
+							</div>
+						</div>
+
+						<div>
+							<div><span>Yesterday</span></div>
+							<div><span class="text-xl font-bold" id="d_cp_yday">Rp 0</span></div>
+
+							<div class="opacity-80">
+								<div id="d_xp_yday"><span>0</span> <span></span></div>
+								<div>vs today</div>
+								<!-- 850-500 -->
+								<!-- Math.round((850-500)/500*100) -->
+							</div>
+						</div>
+
+						<div>
+							<div><span>This month</span></div>
+							<div><span class="text-xl font-bold" id="d_cp_month">Rp 0</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="mb-5">
+				<div class="cnLvl mb-2 flex justify-center gap-2 text-sm">
+					<span>Level Member : </span>
+					<span class="nmLvl0 hidden font-bold text-green-600">Basic</span>
+					<span class="nmLvl1 hidden font-bold text-gray-400">Level1</span>
+					<span class="nmLvl2 hidden font-bold text-yellow-600">Level2</span>
+					<span class="nmLvl3 hidden font-bold text-indigo-600">Level3</span>
+				</div>
+
+				<div class="relative mb-3 flex w-full items-center overflow-hidden rounded-md text-center text-xs text-white">
+					<div class="pnLvl1 flex h-6 w-1/3 items-center justify-center bg-gray-400 pb-1">Level1</div>
+					<div class="pnLvl2 flex h-6 w-1/3 items-center justify-center bg-yellow-600 pb-1">Level2</div>
+					<div class="pnLvl3 flex h-6 w-1/3 items-center justify-center bg-indigo-600 pb-1">Level3</div>
+					<div class="absolute bottom-0 left-0 h-1 w-full rounded-full bg-gray-200 opacity-50"></div>
+					<div id="dpLvl" class="absolute bottom-0 left-0 h-1 rounded-full bg-gray-600"></div>
+				</div>
+
+				<div class="ntLvl mb-2 text-center text-sm"></div>
+			</div>
+
+			<div class="mDash">
+				<input class="tbIn hidden" id="fTabs-1" type="radio" name="postTabs" checked />
+				<input class="tbIn hidden" id="fTabs-2" type="radio" name="postTabs" />
+
+				<div class="tbHd">
+					<label for="fTabs-1">Top links</label>
+					<label for="fTabs-2">Report <span id="tnMonth" class="text-sm">this month</span></label>
+				</div>
+
+				<div class="tbCn">
+					<div class="tbTx-1">
+						<p class="mb-5 text-sm leading-6 text-gray-600">
+							Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quod, sunt. Nostrum, eveniet.
+						</p>
+
+						<div class="relative z-[5] -mx-5 mb-8 overflow-hidden rounded-xl bg-slate-100 sm:mx-0">
+							<div class="mb-5 max-h-96 overflow-x-auto">
+								<table class="mx-auto w-max min-w-full table-auto border-collapse text-sm text-slate-500">
+									<thead
+										class="sticky top-0 bg-slate-100 before:absolute before:inset-0 before:-z-[1] before:border-b before:border-slate-200"
+									>
+										<tr>
+											<th class="px-5 py-3">No</th>
+											<th class="px-5 py-3">ID link</th>
+											<th class="px-5 py-3">Action</th>
+											<th class="px-5 py-3">Valid Click</th>
+											<th class="px-5 py-3">Original Link</th>
+										</tr>
+									</thead>
+									<tbody class="bg-white" id="top-link">
+										<tr class="border-b border-slate-100">
+											<td class="px-5 py-3 text-center">No Data</td>
+											<td class="px-5 py-3 text-center">No Data</td>
+											<td class="px-5 py-3 text-center">No Data</td>
+											<td class="px-5 py-3 text-center">No Data</td>
+											<td class="px-5 py-3 text-center">No Data</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="pointer-events-none absolute inset-0 rounded-xl border border-black/5"></div>
+						</div>
+					</div>
+
+					<div class="tbTx-2">
+						<p class="mb-5 text-sm leading-6 text-gray-600">
+							Lorem ipsum dolor sit amet consectetur, adipisicing elit. Adipisci mollitia itaque perspiciatis.
+						</p>
+
+						<div class="mb-5 text-sm">
+							<form id="fmRpt">
+								<div class="flex flex-wrap items-center gap-3">
+									<div class="flex items-center gap-1">
+										<label for="rpBegin" class="block after:mx-1 after:text-indigo-600 after:content-['*']">Begin</label>
+										<div>
+											<input
+												type="number"
+												name="rpBegin"
+												id="rpBegin"
+												min="1"
+												max="31"
+												value="1"
+												required
+												class="block w-16 rounded-md border-0 py-1.5 text-xs shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+											/>
+										</div>
+									</div>
+
+									<div class="flex items-center gap-1">
+										<label for="rpEnd" class="block after:mx-1 after:text-indigo-600 after:content-['*']">End</label>
+										<div>
+											<input
+												type="number"
+												name="rpEnd"
+												id="rpEnd"
+												min="1"
+												max="31"
+												required="true"
+												class="block w-16 rounded-md border-0 py-1.5 text-xs shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600"
+											/>
+										</div>
+									</div>
+
+									<div class="">
+										<button
+											type="submit"
+											class="rounded-md bg-indigo-600 px-3 py-1 font-semibold text-white shadow-sm ring-offset-2 hover:bg-indigo-500 focus:ring"
+										>
+											Result
+										</button>
+									</div>
+								</div>
+							</form>
+						</div>
+
+						<div class="relative z-[5] -mx-5 mb-8 overflow-hidden rounded-xl bg-slate-100 sm:mx-0">
+							<div class="mb-5 max-h-96 overflow-x-auto">
+								<table class="mx-auto w-max min-w-full table-auto border-collapse text-sm text-slate-500">
+									<thead
+										class="sticky top-0 bg-slate-100 before:absolute before:inset-0 before:-z-[1] before:border-b before:border-slate-200"
+									>
+										<tr>
+											<th class="px-5 py-3">Click</th>
+											<th class="px-5 py-3">CPC</th>
+											<th class="px-5 py-3">Revenue</th>
+										</tr>
+									</thead>
+									<tbody class="bg-white" id="data-rpt">
+										<tr class="border-b border-slate-100">
+											<td class="px-5 py-3 text-center">No Data</td>
+											<td class="px-5 py-3 text-center">No Data</td>
+											<td class="px-5 py-3 text-center">No Data</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<div class="pointer-events-none absolute inset-0 rounded-xl border border-black/5"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<footer class="mt-5 bg-gray-800 py-3 text-gray-300">
+			<span class="flex items-center justify-center gap-1 text-sm">
+				<i>©</i> <span id="getYear">2023</span> ‧
+				<bdi class="flex items-center"
+					><a href="#!" class="flex items-center gap-1"
+						>Shortlink
+						<svg viewBox="0 0 24 24" class="h-4 w-4 text-white" fill="currentColor">
+							<path
+								d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"
+							></path>
+						</svg>
+					</a>
+				</bdi>
+				‧ All rights reserved.</span
+			>
+			<script>
+				/*<![CDATA[*/
+				document.getElementById("getYear").textContent = new Date().getFullYear();
+				/*]]>*/
+			</script>
+		</footer>
+
+		<script>
+			/*<![CDATA[*/
+			let txN = {
+				log: ["Yakin akan logout..?", "Sign-out successful.."],
+				month: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+				event: ["#f7d000", "#bababa", "#c77b30"],
+				cpy: ["Content copied to clipboard..", "Failed to copy.."],
+				act: ["Copy", "Edit", "Delete"],
+				dsb: [`You need to withdraw another <b>$1</b> to level up`],
+			};
+			/*]]>*/
+		</script>
+
+		<script>
+			/*<![CDATA[*/ !(function () {
+				let e,
+					t = ["keydown", "mouseover", "touchmove", "touchstart"],
+					o = () => {
+						let r = document.createElement("script");
+						(r.src = "../user/js/dashboard.js"),
+							r.setAttribute("crossorigin", ""),
+							r.setAttribute("type", "module"),
+							document.head.appendChild(r),
+							clearTimeout(e),
+							t.forEach((e) => {
+								window.removeEventListener(e, o);
+							});
+					};
+				null != localStorage.getItem("xAR_script")
+					? o()
+					: window.addEventListener("load", () => {
+							(e = setTimeout(o, 8e3)),
+								t.forEach((e) => {
+									window.addEventListener(e, o);
+								});
+					  });
+			})(); /*]]>*/
+		</script>
+	</body>
+</html>

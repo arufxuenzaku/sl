@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Login - User</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="bg-grid-slate-100 inset-0 bg-slate-50 bg-center">
+		<div class="fixed flex h-full w-full items-center justify-center">
+			<div class="relative p-5">
+				<button
+					id="login"
+					class="border-1 group mx-auto flex cursor-pointer items-center gap-2 rounded-lg bg-white px-3 py-2 shadow-lg focus:ring-2"
+				>
+					<span
+						><svg viewBox="0 0 20 20" class="h-5 w-5">
+							<path
+								d="M19.6 10.23c0-.82-.1-1.42-.25-2.05H10v3.72h5.5c-.15.96-.74 2.31-2.04 3.22v2.45h3.16c1.89-1.73 2.98-4.3 2.98-7.34z"
+								fill="#4285F4"
+							></path>
+							<path
+								d="M13.46 15.13c-.83.59-1.96 1-3.46 1-2.64 0-4.88-1.74-5.68-4.15H1.07v2.52C2.72 17.75 6.09 20 10 20c2.7 0 4.96-.89 6.62-2.42l-3.16-2.45z"
+								fill="#34A853"
+							></path>
+							<path
+								d="M3.99 10c0-.69.12-1.35.32-1.97V5.51H1.07A9.973 9.973 0 000 10c0 1.61.39 3.14 1.07 4.49l3.24-2.52c-.2-.62-.32-1.28-.32-1.97z"
+								fill="#FBBC05"
+							></path>
+							<path
+								d="M10 3.88c1.88 0 3.13.81 3.85 1.48l2.84-2.76C14.96.99 12.7 0 10 0 6.09 0 2.72 2.25 1.07 5.51l3.24 2.52C5.12 5.62 7.36 3.88 10 3.88z"
+								fill="#EA4335"
+							></path></svg
+					></span>
+					<span class="tx font-semibold text-slate-500 group-focus:text-sky-500">Sign In with Google</span>
+				</button>
+
+				<div id="activation">
+					<p
+						class="st1 fixed bottom-0 left-1/2 mt-6 hidden w-full -translate-x-1/2 rounded-lg bg-sky-100 px-6 py-3 text-center shadow-lg lg:bottom-5 lg:max-w-sm"
+					>
+						<span class="font-semibold">Akun anda sudah aktif..</span>
+					</p>
+					<p
+						class="st0 fixed bottom-0 left-1/2 mt-6 hidden w-full -translate-x-1/2 rounded-lg bg-red-100 px-6 py-3 text-center shadow-lg lg:bottom-5 lg:max-w-sm"
+					>
+						<span class="font-semibold">Akun anda belum aktif..</span> <br />
+						Mohon tunggu persetujuan dari admin..
+					</p>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			/*<![CDATA[*/
+			let txN = {
+				log: ["Yakin akan logout..?", "Sign-out successful.."],
+			};
+			/*]]>*/
+		</script>
+
+		<script>
+			/*<![CDATA[*/ !(function () {
+				let e,
+					t = ["keydown", "mouseover", "touchmove", "touchstart"],
+					o = () => {
+						let r = document.createElement("script");
+						(r.src = "../user/js/login.js"),
+							r.setAttribute("crossorigin", ""),
+							r.setAttribute("type", "module"),
+							document.head.appendChild(r),
+							clearTimeout(e),
+							t.forEach((e) => {
+								window.removeEventListener(e, o);
+							});
+					};
+				null != localStorage.getItem("xAR_script")
+					? o()
+					: window.addEventListener("load", () => {
+							(e = setTimeout(o, 8e3)),
+								t.forEach((e) => {
+									window.addEventListener(e, o);
+								});
+					  });
+			})(); /*]]>*/
+		</script>
+	</body>
+</html>

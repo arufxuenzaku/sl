@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile - User</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="bg-grid-slate-100 inset-0 bg-slate-50 bg-center">
+		<header>
+			<div class="container">
+				<div>
+					<input type="checkbox" class="iNav peer/nav hidden" name="iNav" id="iNav" />
+					<label for="iNav" class="fCls peer-checked/nav:block"></label>
+					<div class="headL">
+						<div>
+							<h1><a href="#!">ShortLink</a></h1>
+						</div>
+						<label for="iNav" class="lNav">
+							<span class="origin-top-left"></span><span></span><span class="origin-bottom-left"></span>
+						</label>
+					</div>
+
+					<div class="headM peer-checked/nav:block">
+						<ul>
+							<li><a href="dashboard.html">Dashboard</a></li>
+							<li><a href="link.html">Link</a></li>
+							<li><a href="report.html">Report</a></li>
+							<li><a href="withdrawal.html">Withdrawal</a></li>
+							<li><a href="event.html">Event</a></li>
+						</ul>
+					</div>
+
+					<div class="headR peer-checked/nav:block">
+						<input type="checkbox" class="peer/user inUser hidden" name="inUser" id="inUser" />
+						<label for="inUser" class="fCls peer-checked/user:lg:block"></label>
+						<input type="checkbox" class="iNotif peer/notif hidden" name="iNotif" id="iNotif" />
+						<label for="iNotif" class="fCls peer-checked/notif:lg:block"></label>
+
+						<div class="m">
+							<div class="flex-shrink-0">
+								<label for="inUser" class="lnUser">
+									<img
+										class="u-photo"
+										src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPzZlVciGeYVCgCEcfFKeNI8IhtFHNShFG_5Xavi8bej56zOpPRIjHEUZsTsLybpnEZkNJ6M-ivL0lcjLs9YEu_xVrD14a9gtcfxBAzIvwrmAY920GO9gkHtlljlwvRnLcRvD8WL5pbEcmgxCpct-7EJsMymUnpFCMxpTk8i0b0P7O82_kzKoEjeb3/w80/user-icon.webp"
+										alt=""
+									/>
+								</label>
+							</div>
+
+							<div class="userDt lg:hidden">
+								<div class="u-name text-base text-white">Username</div>
+								<div class="u-mail text-sm leading-none text-gray-400">email@example.com</div>
+							</div>
+
+							<label for="iNotif" class="lNotif">
+								<svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+									<path
+										stroke-linecap="round"
+										stroke-linejoin="round"
+										d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0"
+									></path>
+								</svg>
+								<span class="hidden">99</span>
+							</label>
+						</div>
+
+						<div class="n peer-checked/notif:hidden peer-checked/user:lg:block">
+							<a href="profile.html">Your Profile</a>
+							<a href="setting.html">Settings</a>
+							<a href="#!" id="signOut">Sign out</a>
+						</div>
+
+						<div id="cNotif" class="o peer-checked/notif:block">
+							<div class="cNtf text-center">Tidak ada..</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container mt-20 max-w-2xl px-5">
+			<form id="profileFm">
+				<div class="space-y-12">
+					<div class="pb-12">
+						<h2 class="text-base font-semibold leading-7 text-gray-900">Profile</h2>
+						<p class="mt-1 text-sm leading-6 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, iusto?</p>
+
+						<div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
+							<div class="sm:col-span-2">
+								<label for="channel" class="block text-sm font-medium leading-6 text-gray-900"
+									>Channel Name <span class="italic text-gray-400">(optional)</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="channel"
+										id="channel"
+										placeholder="Channel name"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="whatsapp" class="block text-sm font-medium leading-6 text-gray-900"
+									>WhatsApp <span class="italic text-gray-400">(optional)</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="whatsapp"
+										id="whatsapp"
+										placeholder="Whatsapp number"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="telegram" class="block text-sm font-medium leading-6 text-gray-900"
+									>Telegram <span class="italic text-gray-400">(optional)</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="telegram"
+										id="telegram"
+										placeholder="Telegram username"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="wdMetode" class="block text-sm font-medium leading-6 text-gray-900">Withdrawal Method</label>
+								<div class="mt-2">
+									<select
+										id="wdMetode"
+										name="wdMetode"
+										required="true"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+									>
+										<option value="metode_1">Metode 01</option>
+										<option value="metode_2">Metode 02</option>
+										<option value="metode_3">Metode 03</option>
+									</select>
+								</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="wdID" class="block text-sm font-medium leading-6 text-gray-900">Withdrawal ID</label>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="wdID"
+										id="wdID"
+										required="true"
+										placeholder="Account number"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-2">
+								<label for="wdName" class="block text-sm font-medium leading-6 text-gray-900">Withdrawal Name</label>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="wdName"
+										id="wdName"
+										required="true"
+										placeholder="Account name"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+						</div>
+
+						<div class="mt-6 flex items-center gap-x-6">
+							<button
+								type="submit"
+								class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-offset-2 hover:bg-indigo-500 focus:ring"
+							>
+								Save Changes
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<footer class="mt-5 bg-gray-800 py-3 text-gray-300">
+			<span class="flex items-center justify-center gap-1 text-sm">
+				<i>©</i> <span id="getYear">2023</span> ‧
+				<bdi class="flex items-center"
+					><a href="#!" class="flex items-center gap-1"
+						>Shortlink
+						<svg viewBox="0 0 24 24" class="h-4 w-4 text-white" fill="currentColor">
+							<path
+								d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"
+							></path>
+						</svg>
+					</a>
+				</bdi>
+				‧ All rights reserved.</span
+			>
+			<script>
+				/*<![CDATA[*/
+				document.getElementById("getYear").textContent = new Date().getFullYear();
+				/*]]>*/
+			</script>
+		</footer>
+
+		<script>
+			/*<![CDATA[*/ !(function () {
+				let e,
+					t = ["keydown", "mouseover", "touchmove", "touchstart"],
+					o = () => {
+						let r = document.createElement("script");
+						(r.src = "../user/js/profile.js"),
+							r.setAttribute("crossorigin", ""),
+							r.setAttribute("type", "module"),
+							document.head.appendChild(r),
+							clearTimeout(e),
+							t.forEach((e) => {
+								window.removeEventListener(e, o);
+							});
+					};
+				null != localStorage.getItem("xAR_script")
+					? o()
+					: window.addEventListener("load", () => {
+							(e = setTimeout(o, 8e3)),
+								t.forEach((e) => {
+									window.addEventListener(e, o);
+								});
+					  });
+			})(); /*]]>*/
+		</script>
+	</body>
+</html>

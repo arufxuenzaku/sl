@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Config - Admin</title>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body class="bg-grid-slate-100 inset-0 bg-slate-50 bg-center">
+		<header>
+			<div class="container">
+				<div>
+					<input type="checkbox" class="iNav peer/nav hidden" name="iNav" id="iNav" />
+					<label for="iNav" class="fCls peer-checked/nav:block"></label>
+
+					<div class="headL">
+						<div>
+							<h1><a href="#!">ShortLink</a></h1>
+						</div>
+						<label for="iNav" class="lNav">
+							<span class="origin-top-left"></span><span></span><span class="origin-bottom-left"></span>
+						</label>
+					</div>
+
+					<div class="headM peer-checked/nav:block">
+						<ul>
+							<li><a href="dashboard.html">Dashboard</a></li>
+							<li><a href="user.html">User</a></li>
+							<li><a href="withdrawal.html">Withdrawal</a></li>
+							<li><a href="event.html">Event</a></li>
+							<li><span>Config</span></li>
+						</ul>
+					</div>
+
+					<div class="headR peer-checked/nav:block">
+						<input type="checkbox" class="peer/user inUser hidden" name="inUser" id="inUser" />
+						<label for="inUser" class="fCls peer-checked/user:lg:block"></label>
+
+						<div class="m">
+							<div class="flex-shrink-0">
+								<label for="inUser" class="lnUser">
+									<img
+										class="u-photo"
+										src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhPzZlVciGeYVCgCEcfFKeNI8IhtFHNShFG_5Xavi8bej56zOpPRIjHEUZsTsLybpnEZkNJ6M-ivL0lcjLs9YEu_xVrD14a9gtcfxBAzIvwrmAY920GO9gkHtlljlwvRnLcRvD8WL5pbEcmgxCpct-7EJsMymUnpFCMxpTk8i0b0P7O82_kzKoEjeb3/w80/user-icon.webp"
+										alt=""
+									/>
+								</label>
+							</div>
+
+							<div class="userDt lg:hidden">
+								<div class="u-name text-white">Username</div>
+								<div class="u-mail text-sm leading-none text-gray-400">email@example.com</div>
+							</div>
+						</div>
+
+						<div class="n peer-checked/notif:hidden peer-checked/user:lg:block">
+							<a href="#!" id="signOut">Sign out</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<div class="container mt-20 max-w-2xl px-5">
+			<form id="configFm">
+				<div class="space-y-12">
+					<div class="pb-12">
+						<h2 class="text-base font-semibold leading-7 text-gray-900">configuration</h2>
+						<p class="mt-1 text-sm leading-6 text-gray-600">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nihil, iusto?</p>
+
+						<div class="mt-10 grid grid-cols-2 gap-x-6 gap-y-8 sm:grid-cols-6">
+							<div class="col-span-2 sm:col-span-6">
+								<label for="ciDomain" class="block text-sm font-medium leading-6 text-gray-900">Domain Shortlink</label>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="ciDomain"
+										id="ciDomain"
+										required
+										placeholder="Domain"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="col-span-2 sm:col-span-3">
+								<label for="ciDomainB" class="block text-sm font-medium leading-6 text-gray-900">Domain Blog</label>
+								<div class="mt-2">
+									<input
+										type="text"
+										name="ciDomainB"
+										id="ciDomainB"
+										required
+										placeholder="Domain"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="col-span-2 sm:col-span-3">
+								<label for="ciCpc" class="block text-sm font-medium leading-6 text-gray-900">Basic CPC</label>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciCpc"
+										id="ciCpc"
+										min="25"
+										max="10000"
+										step="25"
+										required
+										placeholder="Basic CPC"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciSilverCpc" class="block text-sm font-medium leading-6 text-gray-900"
+									>CPC level <span class="font-bold">Silver</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciSilverCpc"
+										id="ciSilverCpc"
+										min="50"
+										max="10000"
+										step="25"
+										required
+										placeholder="CPC"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciSilverMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>Min total WD <span class="font-bold">Silver</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciSilverMin"
+										id="ciSilverMin"
+										min="100000"
+										max="99999999"
+										step="10000"
+										required
+										placeholder="Min"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciGoldCpc" class="block text-sm font-medium leading-6 text-gray-900"
+									>CPC level <span class="font-bold">Gold</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciGoldCpc"
+										id="ciGoldCpc"
+										min="75"
+										max="10000"
+										step="25"
+										required
+										placeholder="CPC"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciGoldMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>Min total WD <span class="font-bold">Gold</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciGoldMin"
+										id="ciGoldMin"
+										min="200000"
+										max="99999999"
+										step="10000"
+										required
+										placeholder="Min"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciPlatinumCpc" class="block text-sm font-medium leading-6 text-gray-900"
+									>CPC level <span class="font-bold">Platinum</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciPlatinumCpc"
+										id="ciPlatinumCpc"
+										min="100"
+										max="10000"
+										step="25"
+										required
+										placeholder="CPC"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciPlatinumMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>Min total WD <span class="font-bold">Platinum</span></label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciPlatinumMin"
+										id="ciPlatinumMin"
+										min="300000"
+										max="99999999"
+										step="10000"
+										required
+										placeholder="Min"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="col-span-2">
+								<label for="ciRank1" class="block text-sm font-medium leading-6 text-gray-900"
+									>Event <span class="font-bold">Rank-1</span> reward</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciRank1"
+										id="ciRank1"
+										min="200000"
+										max="10000000"
+										step="10000"
+										required
+										placeholder="Rank-1 reward"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="col-span-2">
+								<label for="ciRank2" class="block text-sm font-medium leading-6 text-gray-900"
+									>Event <span class="font-bold">Rank-2</span> reward</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciRank2"
+										id="ciRank2"
+										min="150000"
+										max="10000000"
+										step="10000"
+										required
+										placeholder="Rank-2 reward"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="col-span-2">
+								<label for="ciRank3" class="block text-sm font-medium leading-6 text-gray-900"
+									>Event <span class="font-bold">Rank-3</span> reward</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciRank3"
+										id="ciRank3"
+										min="100000"
+										max="10000000"
+										step="10000"
+										required
+										placeholder="Rank-3 reward"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciBankMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">Bank</span> (min)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciBankMin"
+										id="ciBankMin"
+										min="20000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Min WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciBankMax" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">Bank</span> (max)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciBankMax"
+										id="ciBankMax"
+										min="200000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Max WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciDanaMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">Dana</span> (min)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciDanaMin"
+										id="ciDanaMin"
+										min="20000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Min WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciDanaMax" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">DANA</span> (max)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciDanaMax"
+										id="ciDanaMax"
+										min="200000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Max WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciGopayMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">Gopay</span> (min)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciGopayMin"
+										id="ciGopayMin"
+										min="20000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Min WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciGopayMax" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">Gopay</span> (max)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciGopayMax"
+										id="ciGopayMax"
+										min="200000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Max WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciOvoMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">OVO</span> (min)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciOvoMin"
+										id="ciOvoMin"
+										min="20000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Min WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciOvoMax" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">OVO</span> (max)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciOvoMax"
+										id="ciOvoMax"
+										min="200000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Max WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciShopeeMin" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">ShopeePay</span> (min)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciShopeeMin"
+										id="ciShopeeMin"
+										min="20000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Min WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+
+							<div class="sm:col-span-3">
+								<label for="ciShopeeMax" class="block text-sm font-medium leading-6 text-gray-900"
+									>WD method <span class="font-bold">ShopeePay</span> (max)</label
+								>
+								<div class="mt-2">
+									<input
+										type="number"
+										name="ciShopeeMax"
+										id="ciShopeeMax"
+										min="200000"
+										max="10000000"
+										step="5000"
+										required
+										placeholder="Max WD"
+										class="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+									/>
+								</div>
+							</div>
+						</div>
+
+						<div class="mt-6 flex items-center gap-x-6">
+							<button
+								type="submit"
+								class="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm ring-offset-2 hover:bg-indigo-500 focus:ring"
+							>
+								Save Changes
+							</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<footer class="mt-5 bg-gray-800 py-3 text-gray-300">
+			<span class="flex items-center justify-center gap-1 text-sm">
+				<i>©</i> <span id="getYear">2023</span> ‧
+				<bdi class="flex items-center"
+					><a href="#!" class="flex items-center gap-1"
+						>Shortlink
+						<svg viewBox="0 0 24 24" class="h-4 w-4 text-white" fill="currentColor">
+							<path
+								d="M23,12L20.56,9.22L20.9,5.54L17.29,4.72L15.4,1.54L12,3L8.6,1.54L6.71,4.72L3.1,5.53L3.44,9.21L1,12L3.44,14.78L3.1,18.47L6.71,19.29L8.6,22.47L12,21L15.4,22.46L17.29,19.28L20.9,18.46L20.56,14.78L23,12M10,17L6,13L7.41,11.59L10,14.17L16.59,7.58L18,9L10,17Z"
+							></path>
+						</svg>
+					</a>
+				</bdi>
+				‧ All rights reserved.</span
+			>
+			<script>
+				/*<![CDATA[*/
+				document.getElementById("getYear").textContent = new Date().getFullYear();
+				/*]]>*/
+			</script>
+		</footer>
+
+		<script>
+			/*<![CDATA[*/
+			let txN = {
+				log: ["Yakin akan logout..?", "Sign-out successful.."],
+				usr: [
+					"Approve",
+					"Deactive",
+					"Yakin akan menyetujui user ini..?",
+					"User berhasil disetujui..",
+					"Yakin akan menonaktifkan user ini..?",
+					"User berhasil dinonaktifkan..",
+				],
+				cfg: ["Perubahan tersimpan.."],
+			};
+			/*]]>*/
+		</script>
+
+		<script>
+			/*<![CDATA[*/ !(function () {
+				let e,
+					t = ["keydown", "mouseover", "touchmove", "touchstart"],
+					o = () => {
+						let r = document.createElement("script");
+						(r.src = "../admin/js/config.js"),
+							r.setAttribute("crossorigin", ""),
+							r.setAttribute("type", "module"),
+							document.head.appendChild(r),
+							clearTimeout(e),
+							t.forEach((e) => {
+								window.removeEventListener(e, o);
+							});
+					};
+				null != localStorage.getItem("xAR_script")
+					? o()
+					: window.addEventListener("load", () => {
+							(e = setTimeout(o, 8e3)),
+								t.forEach((e) => {
+									window.addEventListener(e, o);
+								});
+					  });
+			})(); /*]]>*/
+		</script>
+	</body>
+</html>
